@@ -19,11 +19,7 @@ public class VehiclesMain {
         cars[3] = new Car("Fiat", "Punto");
         cars[4] = new Car("Seat", "Leon");
 
-//        for (Car c : cars) {
-//            c.show();
-//        }
-
-        showEveryElementOfArray(cars);
+        showEveryElementOfArrayOrList(cars);
 
         System.out.println();
 
@@ -42,24 +38,22 @@ public class VehiclesMain {
 
         cars[2].setModel("Charger");
 
-        showEveryElementOfArray(cars);
+        showEveryElementOfArrayOrList(cars);
 
         System.out.println();
 
-        showEveryElementOfList(carList);
-
-
-
+        showEveryElementOfArrayOrList(carList);
     }
 
-    public static <T> void showEveryElementOfArray(T[] t){
+    public static <T> void showEveryElementOfArrayOrList(T[] t){
 
         for (T model:t) {
             System.out.println(model.toString());
         }
     }
 
-    public static <T> void showEveryElementOfList(List<T> t){
+
+    public static <T> void showEveryElementOfArrayOrList(List<T> t){
 
         Iterator<T> carIterator = t.iterator();
 
