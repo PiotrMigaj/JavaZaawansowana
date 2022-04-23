@@ -19,9 +19,11 @@ public class VehiclesMain {
         cars[3] = new Car("Fiat", "Punto");
         cars[4] = new Car("Seat", "Leon");
 
-        for (Car c : cars) {
-            c.show();
-        }
+//        for (Car c : cars) {
+//            c.show();
+//        }
+
+        showEveryElementOfArray(cars);
 
         System.out.println();
 
@@ -35,21 +37,35 @@ public class VehiclesMain {
 
         System.out.println();
 
+        Car thirdCar = cars[2];
+
+
         cars[2].setModel("Charger");
 
-        for (Car c : cars) {
-            c.show();
-        }
+        showEveryElementOfArray(cars);
 
         System.out.println();
 
-        carIterator = carList.iterator();
+        showEveryElementOfList(carList);
 
-        while (carIterator.hasNext()) {
-            carIterator.next().show();
-        }
 
 
     }
 
+    public static <T> void showEveryElementOfArray(T[] t){
+
+        for (T model:t) {
+            System.out.println(model.toString());
+        }
+    }
+
+    public static <T> void showEveryElementOfList(List<T> t){
+
+        Iterator<T> carIterator = t.iterator();
+
+        while (carIterator.hasNext()) {
+            System.out.println(carIterator.next());
+        }
+
+    }
 }
