@@ -1,6 +1,6 @@
 package pl.migibud.animal;
 
-public class Dog extends Animal implements Runner{
+public class Dog extends Animal implements FastRunner{
 
 
     public Dog(String name) {
@@ -12,8 +12,14 @@ public class Dog extends Animal implements Runner{
         System.out.printf(this.name + " hau hau");
     }
 
+
+    @Override
+    public void runFaster() {
+        System.out.println("Run faster");
+    }
+
     @Override
     public void run() {
-        System.out.printf("Dog runs");
+        System.out.println("Run");
     }
 }
