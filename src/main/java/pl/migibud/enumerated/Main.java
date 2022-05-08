@@ -1,5 +1,8 @@
 package pl.migibud.enumerated;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -38,6 +41,10 @@ public class Main {
         }
 
         System.out.println(a);
+
+
+        ArrayList<String> my = new ArrayList<>();
+        my.add("");
 
     }
 
